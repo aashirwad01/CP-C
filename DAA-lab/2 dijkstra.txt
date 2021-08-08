@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define infinity 999
+
+void shortest_path(int n,int v,int c[10][10],int d[100])
+{
+int i,u,co,f[10],m;
+for(i=1;i<=n;i++)
+f[i]=0,d[i]=c[v][i];
+
+co=2;
+while(co<=n)
+{
+m=99;
+for(i=1;i<=n;i++)
+if(d[i]<m && !f[i])
+m=d[i],u=i;
+
+f[u]=1;
+co++;
+for(i=1;i<=n;i++)
+if((d[u]+c[u][i]<d[i]) && !f[i])
+d[i]=d[u]+c[u][i];
+}
+}
+
+int main()
+{
+int n,v,i,j,c[10][10],d[10];
+cout << "\n Enter the number of nodes:";
+cin >> n;
+
+cout << "\n Enter the cost matrix:\n";
+for(i=1;i<=n;i++)
+for(j=1;j<=n;j++)
+{
+cin >> c[i][j];
+if(c[i][j]==0)
+c[i][j]=infinity;
+}
+
+cout << "\n Enter the source matrix:";
+cin >> v;
+shortest_path(n,v,c,d);
+
+printf("\n Shortest path:\n");
+for(i=1;i<=n;i++)
+if(i!=v)
+cout << v << "->" << i << ", cost= " << d[i] << endl;
+return 0;
+}
