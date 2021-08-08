@@ -66,6 +66,7 @@ void solve(vector<int>v,int n){
 //     cout<< p[n]<<" "<<n<<" ";
    
 // }
+//
 
 void solve_another(vector<int>v,int k )
 {
