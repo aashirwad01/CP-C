@@ -85,7 +85,7 @@ int main(){
    char* pat;
   
    pat=&p[0];
-//    cout<<pat;
+
 
    patsekmp(s,pat);
    
