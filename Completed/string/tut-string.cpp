@@ -9,17 +9,25 @@ int n,m;
     
    getline(cin>>ws,txt);
 
+   string pa;
+   getline(cin>>ws,pa);
+   string p;
+   getline(cin>>ws,p);
+   char* pat;
+  
+   pat=&p[0];
+
    // use this cin>>ws after cin to capture a line it flushes out all the white spaces at the end of last used cin and  then so the line is able to be read
 
 
-   string pat;
+   string pate;
   
 
-   getline(cin,pat);
+   getline(cin,pate);
     
 
     cout<<txt<<endl;
-    cout<<pat<<endl;
+    cout<<pate<<endl;
 
      cin>>n>>m;
     
@@ -28,14 +36,18 @@ int n,m;
     
 //    getline(cin>>ws,txt);
 
-   char pa[20];
+   char pae[20];
   
 
-   cin.getline(pa,20);
+   cin.getline(pae,20);
     
 
     // cout<<txt<<endl;
     cout<<pa<<endl;
+
+
+   
+
 
     return 0;
  }
