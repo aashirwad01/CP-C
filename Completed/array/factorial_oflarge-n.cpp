@@ -12,13 +12,15 @@ public:
 vector<int> factorial(int n){
         int i;int j;
 
-vector<int>v;
+
 int a[10000]={0};
 a[0]=1;
 int size=1;
+
+int carry=0;
 for(i=2;i<=n;i++){
 
-int j;int carry=0;
+carry=0;
 
 for(j=0;j<size;j++)
 {
@@ -37,10 +39,12 @@ while(carry){
 
 }
 
+vector<int>v;
 for(j=size-1;j>=0;j--){
     v.push_back(a[j]);
    
 }
+
 
 
 return v;
@@ -50,8 +54,8 @@ return v;
 // { Driver Code Starts.
 
 int main() {
-    int t;
-    cin >> t;
+    int t=1;
+    // cin >> t;
     while (t--) {
         int N;
         cin >> N;
