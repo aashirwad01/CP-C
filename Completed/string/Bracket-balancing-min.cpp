@@ -78,6 +78,29 @@ void solve_another(string s){
     cout<<(re/2)+ (f%2);
 
 }
+void solve_another(string s){
+    int r=0;
+    int l=0;
+    int im=0;
+    int sa=0;
+    int n=s.size();
+    for( int i=0;i<n;i++){
+        if(s[i]=='['){
+            l++;
+            if(im>0){
+                sa+=im;
+                im--;
+
+            }
+        }
+        else if(s[i]==']'){
+            r++;
+            im=r-l;
+        }
+
+    }
+    cout<<sa;
+}
 
 
 signed main(){
