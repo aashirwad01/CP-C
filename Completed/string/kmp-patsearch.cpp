@@ -44,6 +44,7 @@ void patsekmp(string s ,char* pat){
     int m=strlen(pat);
     int n=s.size();
     int lps[m];
+    int f=0;
     kmplps(pat,m,lps);
     while(i<n){
 
