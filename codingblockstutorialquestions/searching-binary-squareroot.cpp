@@ -10,7 +10,13 @@ const ll mod = 1e9+7, N = 2e6+7, M = 2e6+7, INF = INT_MAX/10;
 ll powe(ll x, ll y){ x = x%mod, y=y%(mod-1);ll ans = 1;while(y>0){if (y&1){ans = (1ll * x * ans)%mod;}y>>=1;x = (1ll * x * x)%mod;}return ans;}
 
 
-
+// Integer Part
+//start from 0 to no and find mind
+// if mid * mid less than equal to no then make ans = mid and move start to mid +1 
+// if mid * mid is > no then move end to mid -1.
+// Floating part
+// here start with 0.1 and then check for mid * mid and keep moving forward adding 0.1 to ans until >n
+// then when found ans in format x.y then make 0.01 steps and so on continue till the precsion inputed.
 
 
 
