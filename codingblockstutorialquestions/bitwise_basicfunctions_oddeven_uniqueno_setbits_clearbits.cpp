@@ -104,7 +104,7 @@ void xor_swapping(){
 }
 
 // extract ith bit of a no
-// do right shift and check the i th bit by removing all the bits after it
+// do left shift and check the i th bit by removing all the bits after it
 
 void extract_bit()
 {
@@ -113,7 +113,7 @@ void extract_bit()
     int i;
     cin>>i;
 
-    (1<<i)!=0?cout<<"1"<<endl:cout<<"0"<<endl;
+    n&(1<<i)!=0?1:0;
 }
 
 // set ith bit to 1
@@ -124,7 +124,7 @@ void set_bit(){
     int n;int i;
     cin>>n;cin>>i;
 
-    int mask= 1>>i;
+    int mask= 1<<i;
     n=n|mask;
 }
 
@@ -141,7 +141,7 @@ void clear_bit()
     int i;
     n=15;
     i=2;
-    int mask =~(1>>i);
+    int mask =~(1<<i);
     n= n&mask;
 
 }
